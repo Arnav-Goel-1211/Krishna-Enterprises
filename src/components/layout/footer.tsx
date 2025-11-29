@@ -20,7 +20,7 @@ export function Footer() {
               <span>Lorikeet Inks</span>
             </Link>
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              Quality Water-Based Flexo Inks for Corrugated Boxes.
+              Precision Inks for Perfect Prints.
             </p>
           </div>
 
