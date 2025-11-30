@@ -13,9 +13,9 @@ export default function AboutPage() {
     <div>
       <section className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center text-center text-white bg-gray-800">
         <Image
-          src="https://picsum.photos/seed/chemistry/1600/600"
-          alt="Abstract image representing innovation and chemistry"
-          data-ai-hint="chemistry abstract"
+          src="https://picsum.photos/seed/creativity/1600/600"
+          alt="An abstract, creative image representing Lorikeet Inks' innovative spirit"
+          data-ai-hint="creative abstract"
           fill
           className="object-cover object-center absolute inset-0"
           priority
