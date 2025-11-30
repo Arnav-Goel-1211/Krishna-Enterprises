@@ -1,144 +1,95 @@
-"use client";
-
-import { useState, useMemo } from 'react';
-import type { products, filterOptions } from '@/lib/data';
 import Image from 'next/image';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Label } from '@/components/ui/label';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Box, CupSoda, Pencil, Utensils, FileText } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-type Product = (typeof products)[0];
-type FilterOptions = typeof filterOptions;
+export const metadata = {
+  title: "Our Inks - Lorikeet Inks",
+  description: "Explore our high-performance, water-based flexo inks, engineered for a wide variety of applications including corrugated boxes, paper cups, food packaging, and more.",
+};
 
-interface ProductClientPageProps {
-  allProducts: Product[];
-  filterOptions: FilterOptions;
-}
+const specializedUses = [
+  {
+    title: "Corrugated Boxes",
+    icon: <Box className="w-10 h-10 text-primary" />,
+    imageUrl: "https://picsum.photos/seed/boxes/500/350",
+    dataAiHint: "corrugated boxes",
+    description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
+  },
+  {
+    title: "Paper Cups & Napkins",
+    icon: <CupSoda className="w-10 h-10 text-primary" />,
+    imageUrl: "https://picsum.photos/seed/cups/500/350",
+    dataAiHint: "paper cups",
+    description: "Safe and compliant inks for single-use items, offering sharp prints and quick drying for high-speed converting lines."
+  },
+  {
+    title: "Stationery",
+    icon: <Pencil className="w-10 h-10 text-primary" />,
+    imageUrl: "https://picsum.photos/seed/stationery/500/350",
+    dataAiHint: "stationery items",
+    description: "Achieve crisp, clean, and consistent color for notebooks, envelopes, and other paper-based stationery products."
+  },
+  {
+    title: "Food Packaging",
+    icon: <Utensils className="w-10 h-10 text-primary" />,
+    imageUrl: "https://picsum.photos/seed/foodpackaging/500/350",
+    dataAiHint: "food packaging",
+    description: "Our food-grade compliant inks are formulated for safety and performance in indirect food contact applications like flexible packaging and labels."
+  },
+  {
+    title: "Other Applications",
+    icon: <FileText className="w-10 h-10 text-primary" />,
+    imageUrl: "https://picsum.photos/seed/otherpaper/500/350",
+    dataAiHint: "printed paper",
+    description: "From gift wrap to paper bags and more, our versatile water-based inks are adaptable to a wide array of printing needs."
+  }
+];
 
-function ProductCard({ product }: { product: Product }) {
-  const [hoveredColor, setHoveredColor] = useState(product.colors[0] || '#E0F7FA');
-
+export default function ProductsPage() {
   return (
-    <Card 
-      className="flex flex-col h-full overflow-hidden transition-all duration-300" 
-      style={{ borderColor: hoveredColor, borderWidth: '2px' }}
-      onMouseLeave={() => setHoveredColor(product.colors[0] || '#E0F7FA')}
-    >
-      <CardHeader className="p-0">
-        <div className="relative aspect-video">
-          <Image
-            src={product.imageUrl}
-            alt={product.name}
-            data-ai-hint="ink bottle product"
-            fill
-            className="object-cover"
-          />
+    <div>
+      <section className="py-12 md:py-20 bg-primary/10">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-foreground">Water-Based Inks</h1>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+            A complete range of vibrant, sustainable, and high-performance solutions engineered for versatility and excellence.
+          </p>
         </div>
-      </CardHeader>
-      <CardContent className="p-4 flex-grow">
-        <CardTitle className="text-xl font-headline">{product.name}</CardTitle>
-        <p className="text-muted-foreground mt-2 text-sm">{product.description}</p>
-      </CardContent>
-      <CardFooter className="p-4 pt-0 flex flex-col items-start">
-        <div className="font-semibold text-sm mb-2">Available Colors:</div>
-        <div className="flex flex-wrap gap-2">
-          {product.colors.map((color, index) => (
-            <div
-              key={index}
-              className="h-6 w-6 rounded-full border-2 cursor-pointer transition-transform hover:scale-125"
-              style={{ backgroundColor: color }}
-              onMouseEnter={() => setHoveredColor(color)}
-              aria-label={`Color ${color}`}
-            />
+      </section>
+
+      <main className="container mx-auto px-4 py-16 md:py-24">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Specialized Uses</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Our water-based inks are formulated to deliver outstanding results across a diverse range of applications.
+            </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {specializedUses.map((use, index) => (
+            <Card key={index} className="flex flex-col group overflow-hidden">
+                <CardHeader className="p-0">
+                    <div className="relative aspect-[5/3.5] overflow-hidden">
+                        <Image
+                            src={use.imageUrl}
+                            alt={use.title}
+                            data-ai-hint={use.dataAiHint}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                    </div>
+                </CardHeader>
+                <CardContent className="p-6 flex-grow flex flex-col">
+                    <div className="flex items-center gap-4 mb-4">
+                        {use.icon}
+                        <CardTitle className="text-2xl font-headline">{use.title}</CardTitle>
+                    </div>
+                    <p className="text-muted-foreground">{use.description}</p>
+                </CardContent>
+            </Card>
           ))}
         </div>
-      </CardFooter>
-    </Card>
-  );
-}
-
-export default function ProductClientPage({ allProducts, filterOptions }: ProductClientPageProps) {
-  const [filters, setFilters] = useState<{ applications: string[]; properties: string[] }>({
-    applications: [],
-    properties: [],
-  });
-
-  const handleFilterChange = (category: keyof typeof filters, value: string) => {
-    setFilters((prev) => {
-      const newValues = prev[category].includes(value)
-        ? prev[category].filter((v) => v !== value)
-        : [...prev[category], value];
-      return { ...prev, [category]: newValues };
-    });
-  };
-
-  const filteredProducts = useMemo(() => {
-    return allProducts.filter((product) => {
-      const applicationMatch =
-        filters.applications.length === 0 ||
-        filters.applications.some((app) => product.applications.includes(app));
-      const propertyMatch =
-        filters.properties.length === 0 ||
-        filters.properties.some((prop) => product.properties.includes(prop));
-      return applicationMatch && propertyMatch;
-    });
-  }, [allProducts, filters]);
-
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-      <aside className="lg:col-span-1">
-        <Card>
-          <CardHeader>
-            <CardTitle className="font-headline">Filters</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Accordion type="multiple" defaultValue={['applications', 'properties']} className="w-full">
-              <AccordionItem value="applications">
-                <AccordionTrigger className="font-semibold">Applications</AccordionTrigger>
-                <AccordionContent>
-                  <div className="space-y-2">
-                    {filterOptions.applications.map((app) => (
-                      <div key={app} className="flex items-center space-x-2">
-                        <Checkbox id={`app-${app}`} onCheckedChange={() => handleFilterChange('applications', app)} />
-                        <Label htmlFor={`app-${app}`} className="font-normal text-sm">{app}</Label>
-                      </div>
-                    ))}
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="properties">
-                <AccordionTrigger className="font-semibold">Properties</AccordionTrigger>
-                <AccordionContent>
-                  <div className="space-y-2">
-                    {filterOptions.properties.map((prop) => (
-                      <div key={prop} className="flex items-center space-x-2">
-                        <Checkbox id={`prop-${prop}`} onCheckedChange={() => handleFilterChange('properties', prop)} />
-                        <Label htmlFor={`prop-${prop}`} className="font-normal text-sm">{prop}</Label>
-                      </div>
-                    ))}
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </CardContent>
-        </Card>
-      </aside>
-
-      <div className="lg:col-span-3">
-        {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        ) : (
-          <div className="flex flex-col items-center justify-center h-96 border rounded-lg">
-            <h3 className="text-xl font-semibold">No products found</h3>
-            <p className="text-muted-foreground mt-2">Try adjusting your filters.</p>
-          </div>
-        )}
-      </div>
+      </main>
     </div>
   );
 }
