@@ -21,21 +21,17 @@ export default function ContactPage() {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-3">
-              <h2 className="text-3xl font-headline font-bold mb-6">Send a Message</h2>
-              <ContactForm />
-            </div>
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 lg:row-start-1">
               <div className="bg-card p-8 rounded-lg shadow-md border">
-                <h2 className="text-3xl font-headline font-bold mb-6">Direct Contact</h2>
+                <h2 className="text-3xl font-headline font-bold mb-6">Contact Details</h2>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Our Headquarters</h3>
-                      <p className="text-muted-foreground">123 Inkwell Lane, Print City, PC 54321, USA</p>
+                      <h3 className="font-semibold">Our Manufacturing Units</h3>
+                      <p className="text-muted-foreground">Ladwa, DIstt. Kurukshetra, Haryana -136132</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -44,7 +40,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold">General Inquiries</h3>
-                      <a href="mailto:info@lorikeetinks.com" className="text-muted-foreground hover:text-primary transition-colors">info@lorikeetinks.com</a>
+                      <a href="mailto:kre2811@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">kre2811@gmail.com</a>
                     </div>
                   </div>
                    <div className="flex items-start gap-4">
@@ -52,12 +48,16 @@ export default function ContactPage() {
                        <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Customer Support</h3>
-                      <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">+1 (234) 567-890</a>
+                      <h3 className="font-semibold">Contact Number</h3>
+                      <a href="tel:9255392811" className="text-muted-foreground hover:text-primary transition-colors">9255392811</a>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+             <div className="lg:col-span-3">
+              <h2 className="text-3xl font-headline font-bold mb-6">Send a Message</h2>
+              <ContactForm />
             </div>
           </div>
         </div>
