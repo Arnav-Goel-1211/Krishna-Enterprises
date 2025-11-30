@@ -16,35 +16,35 @@ export const metadata = {
 const specializedUses = [
   {
     title: "Corrugated Boxes",
-    icon: <Box className="w-10 h-10 text-primary" />,
+    icon: <Box className="w-10 h-10 text-chart-1" />,
     imageUrl: CorrugatedBoxesImg,
     dataAiHint: "printed boxes",
     description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
   },
   {
     title: "Paper Cups & Napkins",
-    icon: <CupSoda className="w-10 h-10 text-primary" />,
+    icon: <CupSoda className="w-10 h-10 text-chart-2" />,
     imageUrl: PaperCupsImg,
     dataAiHint: "printed cups",
     description: "Safe and compliant inks for single-use items, offering sharp prints and quick drying for high-speed converting lines."
   },
   {
     title: "Stationery",
-    icon: <Pencil className="w-10 h-10 text-primary" />,
+    icon: <Pencil className="w-10 h-10 text-chart-3" />,
     imageUrl: StationeryImg,
     dataAiHint: "printed stationery",
     description: "Achieve crisp, clean, and consistent color for notebooks, envelopes, and other paper-based stationery products."
   },
   {
     title: "Food Packaging",
-    icon: <Utensils className="w-10 h-10 text-primary" />,
+    icon: <Utensils className="w-10 h-10 text-chart-4" />,
     imageUrl: FoodPackagingImg,
     dataAiHint: "food packaging",
     description: "Our food-grade compliant inks are formulated for safety and performance in indirect food contact applications like flexible packaging and labels."
   },
   {
     title: "Other Applications",
-    icon: <FileText className="w-10 h-10 text-primary" />,
+    icon: <FileText className="w-10 h-10 text-chart-5" />,
     imageUrl: others,
     dataAiHint: "shopping bag",
     description: "From gift wrap to paper bags and more, our versatile water-based inks are adaptable to a wide array of printing needs."
@@ -73,7 +73,7 @@ export default function ProductsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {specializedUses.map((use, index) => (
-            <Card key={index} className="flex flex-col group overflow-hidden">
+            <Card key={index} className="flex flex-col group overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-background to-card">
                 <CardHeader className="p-0">
                     <div className="relative aspect-[5/3.5] overflow-hidden">
                         <Image
@@ -87,7 +87,9 @@ export default function ProductsPage() {
                 </CardHeader>
                 <CardContent className="p-6 flex-grow flex flex-col">
                     <div className="flex items-center gap-4 mb-4">
-                        {use.icon}
+                        <div className="p-2 bg-background rounded-lg group-hover:bg-transparent">
+                            {use.icon}
+                        </div>
                         <CardTitle className="text-2xl font-headline">{use.title}</CardTitle>
                     </div>
                     <p className="text-muted-foreground">{use.description}</p>
