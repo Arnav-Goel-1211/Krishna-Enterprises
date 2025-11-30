@@ -44,7 +44,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold">General Inquiries</h3>
-                      <a href="mailto:kre2811@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">kre2811@gmail.com</a>
+                      <a href="mailto:lorikeetinks@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">lorikeetinks@gmail.com</a>
                     </div>
                   </div>
                    <div className="flex items-start gap-4">
