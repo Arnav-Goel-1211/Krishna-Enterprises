@@ -23,10 +23,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 font-headline text-xl font-bold">
-          <Logo className="h-8 w-8 text-primary" />
-          <span>Lorikeet Inks</span>
+          <Logo className="h-16 w-auto" />
+          <span className="sr-only">Lorikeet Inks</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -55,8 +55,8 @@ export function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col p-4">
                 <Link href="/" className="mb-8 flex items-center gap-2 font-headline text-xl font-bold" onClick={() => setMobileMenuOpen(false)}>
-                  <Logo className="h-8 w-8 text-primary" />
-                  <span>Lorikeet Inks</span>
+                  <Logo className="h-16 w-auto" />
+                  <span className="sr-only">Lorikeet Inks</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (

@@ -16,8 +16,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center md:items-start">
             <Link href="/" className="flex items-center gap-2 font-headline text-xl font-bold mb-4">
-              <Logo className="h-8 w-8 text-primary" />
-              <span>Lorikeet Inks</span>
+              <Logo className="h-16 w-auto" />
+              <span className="sr-only">Lorikeet Inks</span>
             </Link>
             <p className="text-muted-foreground text-sm text-center md:text-left">
               Precision Inks for Perfect Prints.
