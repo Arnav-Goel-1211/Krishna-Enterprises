@@ -120,39 +120,6 @@ export default function AboutPage() {
         </div>
       </section>
       
-      <section className="py-16 md:py-24 bg-card">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-12">Meet Our Leadership Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {teamMembers.slice(0, 6).map((member) => (
-              <Card key={member.name} className="flex flex-col items-center text-center">
-                 <CardHeader>
-                  <Avatar className="w-28 h-28 mb-4 border-4 border-primary/20">
-                    <AvatarImage src={member.imageUrl} alt={member.name} data-ai-hint="professional headshot" />
-                    <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                  </Avatar>
-                  <CardTitle className="font-headline text-2xl">{member.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-primary text-md font-medium">{member.role}</p>
-                  <p className="text-muted-foreground mt-2 text-sm">
-                    {
-                      {
-                        "Founder & CEO": "Guiding our vision with decades of industry experience.",
-                        "Head of R&D": "Driving innovation and the next generation of ink technology.",
-                        "Lead Chemist": "Perfecting our formulas for unparalleled quality and performance.",
-                        "Production Manager": "Ensuring operational excellence and timely delivery.",
-                        "Quality Assurance Lead": "Upholding our commitment to the highest quality standards.",
-                        "Sales Director": "Building strong partnerships and driving customer success."
-                      }[member.role] || ""
-                    }
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
