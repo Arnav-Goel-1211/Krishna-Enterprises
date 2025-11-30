@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import CorrugatedBoxesImg from '@/images/corrugatedboxes.jpg';
 import PaperCupsImg from '@/images/papercups.jpg';
 import StationeryImg from '@/images/stationery.jpg';
+import FoodPackagingImg from '@/images/Foods-packaging.jpg';
+import others from '@/images/others.jpg';
 
 
 export const metadata = {
@@ -36,14 +38,14 @@ const specializedUses = [
   {
     title: "Food Packaging",
     icon: <Utensils className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/foodbox/500/350",
+    imageUrl: FoodPackagingImg,
     dataAiHint: "food packaging",
     description: "Our food-grade compliant inks are formulated for safety and performance in indirect food contact applications like flexible packaging and labels."
   },
   {
     title: "Other Applications",
     icon: <FileText className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/paperbags/500/350",
+    imageUrl: others,
     dataAiHint: "shopping bag",
     description: "From gift wrap to paper bags and more, our versatile water-based inks are adaptable to a wide array of printing needs."
   }

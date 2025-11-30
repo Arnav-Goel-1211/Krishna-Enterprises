@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import * as React from "react";
+import logoSrc from './logo.png';
 
 export const Logo = React.forwardRef<
   HTMLImageElement,
@@ -8,7 +9,7 @@ export const Logo = React.forwardRef<
 >(({ className, ...props }, ref) => {
   return (
     <Image
-      src="/logo.png"
+      src={logoSrc}
       alt="Lorikeet Inks Logo"
       width={100}
       height={100}
