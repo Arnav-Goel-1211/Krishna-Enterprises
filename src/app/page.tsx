@@ -6,18 +6,18 @@ import { Award, Box, Droplets, Leaf, ChevronRight, CupSoda, Pencil, Utensils, Fi
 
 const specializedUses = [
   {
-    title: "Corrugated Boxes",
-    icon: <Box className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/printedboxes/500/350",
-    dataAiHint: "printed boxes",
-    description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
-  },
-  {
     title: "Paper Cups & Napkins",
     icon: <CupSoda className="w-10 h-10 text-primary" />,
     imageUrl: "https://picsum.photos/seed/papercups/500/350",
     dataAiHint: "printed cups",
     description: "Safe and compliant inks for single-use items, offering sharp prints and quick drying for high-speed converting lines."
+  },
+  {
+    title: "Corrugated Boxes",
+    icon: <Box className="w-10 h-10 text-primary" />,
+    imageUrl: "https://picsum.photos/seed/printedboxes/500/350",
+    dataAiHint: "printed boxes",
+    description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
   },
   {
     title: "Stationery",
