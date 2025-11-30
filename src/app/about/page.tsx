@@ -13,7 +13,7 @@ export default function AboutPage() {
     <div>
       <section className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center text-center text-white bg-gray-800">
         <Image
-          src="https://picsum.photos/seed/creativity/1600/600"
+          src="https://picsum.photos/seed/creativity-splash/1600/600"
           alt="An abstract, creative image representing Lorikeet Inks' innovative spirit"
           data-ai-hint="creative abstract"
           fill
@@ -67,8 +67,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center border-primary/20">
               <CardHeader className="items-center">
-                <div className="bg-accent/20 p-3 rounded-full mb-2">
-                  <TestTube2 className="w-8 h-8 text-accent" />
+                <div className="bg-primary/10 p-3 rounded-full mb-2">
+                  <TestTube2 className="w-8 h-8 text-primary" />
                 </div>
                 <CardTitle className="font-headline">Innovation</CardTitle>
               </CardHeader>
@@ -76,9 +76,9 @@ export default function AboutPage() {
                 <p className="text-muted-foreground">We relentlessly pursue the next breakthrough, investing in R&D to develop smarter, more efficient ink technologies.</p>
               </CardContent>
             </Card>
-            <Card className="text-center border-primary/20">
+            <Card className="text-center border-accent/20">
               <CardHeader className="items-center">
-                <div className="bg-accent/20 p-3 rounded-full mb-2">
+                <div className="bg-accent/10 p-3 rounded-full mb-2">
                    <Recycle className="w-8 h-8 text-accent" />
                 </div>
                 <CardTitle className="font-headline">Sustainability</CardTitle>
@@ -87,10 +87,10 @@ export default function AboutPage() {
                 <p className="text-muted-foreground">Our commitment is to a healthier planet, creating eco-conscious products that set new standards for the industry.</p>
               </CardContent>
             </Card>
-             <Card className="text-center border-primary/20">
+             <Card className="text-center" style={{borderColor: 'hsl(var(--chart-3))'}}>
               <CardHeader className="items-center">
-                <div className="bg-accent/20 p-3 rounded-full mb-2">
-                   <Users className="w-8 h-8 text-accent" />
+                <div style={{backgroundColor: 'hsl(var(--chart-3) / 0.1)' }} className="p-3 rounded-full mb-2">
+                   <Users className="w-8 h-8" style={{color: 'hsl(var(--chart-3))'}} />
                 </div>
                 <CardTitle className="font-headline">Partnership</CardTitle>
               </CardHeader>
