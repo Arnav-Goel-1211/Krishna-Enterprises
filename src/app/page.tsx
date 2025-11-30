@@ -1,13 +1,35 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Award, Box, Droplets, Leaf, ChevronRight } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { products } from '@/lib/data';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Award, Box, Droplets, Leaf, ChevronRight, CupSoda, Pencil, Utensils, FileText } from 'lucide-react';
+
+const specializedUses = [
+  {
+    title: "Corrugated Boxes",
+    icon: <Box className="w-10 h-10 text-primary" />,
+    imageUrl: "https://picsum.photos/seed/printedboxes/500/350",
+    dataAiHint: "printed boxes",
+    description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
+  },
+  {
+    title: "Paper Cups & Napkins",
+    icon: <CupSoda className="w-10 h-10 text-primary" />,
+    imageUrl: "https://picsum.photos/seed/papercups/500/350",
+    dataAiHint: "printed cups",
+    description: "Safe and compliant inks for single-use items, offering sharp prints and quick drying for high-speed converting lines."
+  },
+  {
+    title: "Stationery",
+    icon: <Pencil className="w-10 h-10 text-primary" />,
+    imageUrl: "https://picsum.photos/seed/notebooks/500/350",
+    dataAiHint: "printed stationery",
+    description: "Achieve crisp, clean, and consistent color for notebooks, envelopes, and other paper-based stationery products."
+  },
+];
+
 
 export default function Home() {
-  const featuredProducts = products.slice(0, 5);
 
   return (
     <div className="flex flex-col">
@@ -69,52 +91,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="featured-products" className="py-16 md:py-24 bg-card">
+      <section id="specialized-uses" className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Flagship Ink Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Ink Applications</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Explore our industry-leading inks, engineered for excellence and trusted by top converters.
+              Engineered for excellence across a diverse range of materials and industries.
             </p>
           </div>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-6xl mx-auto"
-          >
-            <CarouselContent>
-              {featuredProducts.map((product) => (
-                <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <Card className="h-full flex flex-col group overflow-hidden">
-                      <CardHeader>
-                        <div className="relative aspect-video rounded-md overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {specializedUses.map((use, index) => (
+              <Card key={index} className="flex flex-col group overflow-hidden">
+                  <CardHeader className="p-0">
+                      <div className="relative aspect-[5/3.5] overflow-hidden">
                           <Image
-                            src={product.imageUrl}
-                            alt={product.name}
-                            data-ai-hint="ink bottle"
-                            fill
-                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                              src={use.imageUrl}
+                              alt={use.title}
+                              data-ai-hint={use.dataAiHint}
+                              fill
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
                           />
-                        </div>
-                      </CardHeader>
-                      <CardContent className="flex-grow flex flex-col">
-                        <h3 className="text-lg font-headline font-semibold">{product.name}</h3>
-                        <p className="text-muted-foreground mt-2 text-sm flex-grow">{product.description}</p>
-                        <Button asChild variant="outline" className="mt-4 w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                          <Link href={`/products`}>View Details</Link>
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex" />
-            <CarouselNext className="hidden sm:flex" />
-          </Carousel>
+                      </div>
+                  </CardHeader>
+                  <CardContent className="p-6 flex-grow flex flex-col">
+                      <div className="flex items-center gap-4 mb-4">
+                          {use.icon}
+                          <CardTitle className="text-2xl font-headline">{use.title}</CardTitle>
+                      </div>
+                      <p className="text-muted-foreground">{use.description}</p>
+                  </CardContent>
+              </Card>
+            ))}
+          </div>
+           <div className="text-center mt-12">
+            <Button asChild size="lg">
+              <Link href="/products">See All Applications <ChevronRight className="ml-2 h-5 w-5" /></Link>
+            </Button>
+          </div>
         </div>
       </section>
       
