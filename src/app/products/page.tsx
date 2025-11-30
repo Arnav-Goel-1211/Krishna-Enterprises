@@ -11,7 +11,7 @@ const specializedUses = [
   {
     title: "Corrugated Boxes",
     icon: <Box className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/printedboxes/500/350",
+    imageUrl: "/home/user/studio/src/images/corrugatedboxes.jpg",
     dataAiHint: "printed boxes",
     description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
   },

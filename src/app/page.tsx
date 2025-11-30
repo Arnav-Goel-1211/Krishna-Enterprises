@@ -3,27 +3,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Award, Box, Droplets, Leaf, ChevronRight, CupSoda, Pencil, Utensils, FileText } from 'lucide-react';
+import { Award, Box, Droplets, Leaf, ChevronRight, CupSoda, Pencil } from 'lucide-react';
+import CorrugatedBoxesImg from '@/images/corrugatedboxes.jpg';
+import PaperCupsImg from '@/images/papercups.jpg';
+import StationeryImg from '@/images/stationery.jpg';
+
 
 const specializedUses = [
-  {
+    {
     title: "Paper Cups & Napkins",
     icon: <CupSoda className="w-10 h-10 text-primary" />,
-    imageUrl: "/images/paper-cups.jpg",
+    imageUrl: PaperCupsImg,
     dataAiHint: "paper cups",
     description: "Safe and compliant inks for single-use items, offering sharp prints and quick drying for high-speed converting lines."
   },
   {
     title: "Corrugated Boxes",
     icon: <Box className="w-10 h-10 text-primary" />,
-    imageUrl: "/images/corrugated-boxes.jpg",
+    imageUrl: CorrugatedBoxesImg,
     dataAiHint: "shipping boxes",
     description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
   },
   {
     title: "Stationery",
     icon: <Pencil className="w-10 h-10 text-primary" />,
-    imageUrl: "/images/stationery.jpg",
+    imageUrl: StationeryImg,
     dataAiHint: "printed journals",
     description: "Achieve crisp, clean, and consistent color for notebooks, envelopes, and other paper-based stationery products."
   },
@@ -171,3 +175,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
