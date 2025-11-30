@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { teamMembers } from '@/lib/data';
 import { Recycle, TestTube2, Users } from 'lucide-react';
 
@@ -99,24 +98,6 @@ export default function AboutPage() {
                 <p className="text-muted-foreground">We build lasting relationships by acting as a true partner, offering tailored solutions and expert support.</p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-      
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-12">The Minds Behind the Ink</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
-            {teamMembers.map((member) => (
-              <div key={member.name} className="flex flex-col items-center">
-                <Avatar className="w-24 h-24 mb-4 border-4 border-primary/20">
-                  <AvatarImage src={member.imageUrl} alt={member.name} data-ai-hint="professional headshot" />
-                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                </Avatar>
-                <h3 className="font-semibold">{member.name}</h3>
-                <p className="text-primary text-sm font-medium">{member.role}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
