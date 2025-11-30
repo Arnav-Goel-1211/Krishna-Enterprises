@@ -72,15 +72,15 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
-              <div className="bg-primary/10 p-4 rounded-full mb-4">
-                <Leaf className="w-10 h-10 text-primary" />
+              <div className="bg-accent/10 p-4 rounded-full mb-4">
+                <Leaf className="w-10 h-10 text-accent" />
               </div>
               <h3 className="text-xl font-headline font-semibold mb-2">Sustainable Innovation</h3>
               <p className="text-muted-foreground">Our water-based formulas reduce environmental impact while delivering exceptional print quality.</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="bg-primary/10 p-4 rounded-full mb-4">
-                <Droplets className="w-10 h-10 text-primary" />
+               <div style={{backgroundColor: 'hsl(var(--chart-3) / 0.1)'}} className="p-4 rounded-full mb-4">
+                <Droplets className="w-10 h-10" style={{color: 'hsl(var(--chart-3))'}} />
               </div>
               <h3 className="text-xl font-headline font-semibold mb-2">Brilliant Performance</h3>
               <p className="text-muted-foreground">Achieve stunningly vibrant and durable colors that make your packaging pop and endure any condition.</p>
