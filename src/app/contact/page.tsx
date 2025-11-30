@@ -49,7 +49,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Contact Number</h3>
-                      <a href="tel:9255392811" className="text-muted-foreground hover:text-primary transition-colors">9255392811</a>
+                      <a href="tel:+919255392811" className="text-muted-foreground hover:text-primary transition-colors">+91 9255392811</a>
                     </div>
                   </div>
                 </div>
