@@ -1,5 +1,6 @@
 import { ContactForm } from './ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Logo } from '@/components/logo';
 
 export const metadata = {
   title: "Contact Us - Lorikeet Inks",
@@ -23,6 +24,9 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-5 gap-12">
             <div className="lg:col-span-2 lg:row-start-1">
               <div className="bg-card p-8 rounded-lg shadow-md border">
+                <div className="mb-6">
+                  <Logo className="h-20 w-auto" />
+                </div>
                 <h2 className="text-3xl font-headline font-bold mb-6">Contact Details</h2>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
