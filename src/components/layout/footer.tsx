@@ -12,13 +12,13 @@ export function Footer() {
   return (
     <footer className="bg-card border-t">
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           <div className="flex flex-col items-center md:items-start">
             <Link href="/" className="flex items-center gap-2 font-headline text-xl font-bold mb-4">
               <Logo className="h-16 w-auto" />
               <span className="sr-only">Lorikeet Inks</span>
             </Link>
-            <p className="text-muted-foreground text-sm text-center md:text-left">
+            <p className="text-muted-foreground text-sm text-center md:text-left max-w-xs">
               Precision Inks for Perfect Prints.
             </p>
           </div>
