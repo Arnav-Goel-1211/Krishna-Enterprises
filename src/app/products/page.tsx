@@ -50,7 +50,7 @@ export default function ProductsPage() {
     <div>
       <section className="py-12 md:py-20 bg-primary/10">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold text-foreground">Water-Based Inks</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-foreground">Waterbased Printing Inks</h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             A complete range of vibrant, sustainable, and high-performance solutions engineered for versatility and excellence.
           </p>
