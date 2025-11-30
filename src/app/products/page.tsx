@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import { Box, CupSoda, Pencil, Utensils, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import CorrugatedBoxesImg from '@/images/corrugatedboxes.jpg';
+import PaperCupsImg from '@/images/papercups.jpg';
+import StationeryImg from '@/images/stationery.jpg';
+
 
 export const metadata = {
   title: "Our Inks - Lorikeet Inks",
@@ -11,21 +15,21 @@ const specializedUses = [
   {
     title: "Corrugated Boxes",
     icon: <Box className="w-10 h-10 text-primary" />,
-    imageUrl: "/home/user/studio/src/images/corrugatedboxes.jpg",
+    imageUrl: CorrugatedBoxesImg,
     dataAiHint: "printed boxes",
     description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
   },
   {
     title: "Paper Cups & Napkins",
     icon: <CupSoda className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/papercups/500/350",
+    imageUrl: PaperCupsImg,
     dataAiHint: "printed cups",
     description: "Safe and compliant inks for single-use items, offering sharp prints and quick drying for high-speed converting lines."
   },
   {
     title: "Stationery",
     icon: <Pencil className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/notebooks/500/350",
+    imageUrl: StationeryImg,
     dataAiHint: "printed stationery",
     description: "Achieve crisp, clean, and consistent color for notebooks, envelopes, and other paper-based stationery products."
   },
