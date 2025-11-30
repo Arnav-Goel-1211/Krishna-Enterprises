@@ -23,19 +23,19 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+      <div className="container mx-auto flex h-28 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 font-headline text-xl font-bold">
-          <Logo className="h-16 w-auto" />
+          <Logo className="h-24 w-auto" />
           <span className="sr-only">Lorikeet Inks</span>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "text-base font-medium transition-colors hover:text-primary",
+                "text-xl font-medium transition-colors hover:text-primary",
                 pathname === link.href ? "text-primary font-bold" : "text-foreground/60"
               )}
             >
@@ -47,25 +47,25 @@ export function Header() {
         <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Menu className="h-6 w-6" />
+              <Button variant="outline" size="icon" className="h-12 w-12">
+                <Menu className="h-8 w-8" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col p-4">
                 <Link href="/" className="mb-8 flex items-center gap-2 font-headline text-xl font-bold" onClick={() => setMobileMenuOpen(false)}>
-                  <Logo className="h-16 w-auto" />
+                  <Logo className="h-20 w-auto" />
                   <span className="sr-only">Lorikeet Inks</span>
                 </Link>
-                <nav className="flex flex-col gap-4">
+                <nav className="flex flex-col gap-6">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        "text-lg font-medium",
+                        "text-2xl font-medium",
                         pathname === link.href ? "text-primary" : "text-foreground"
                       )}
                     >
