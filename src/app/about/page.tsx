@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { teamMembers } from '@/lib/data';
-import { Recycle, TestTube2, Users } from 'lucide-react';
+import { Award, Target, Users, TrendingUp, Sparkles, Handshake } from 'lucide-react';
 
 export const metadata = {
   title: "About Us - Lorikeet Inks",
@@ -12,9 +12,9 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div>
-      <section className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center text-center text-white bg-gray-800">
+      <section className="relative w-full h-[30vh] flex items-center justify-center text-center text-white bg-gray-800">
         <Image
-          src="https://picsum.photos/seed/chemistry/1600/600"
+          src="https://picsum.photos/seed/chemistry/1600/500"
           alt="Abstract image representing innovation and chemistry"
           data-ai-hint="chemistry abstract"
           fill
@@ -23,35 +23,32 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 p-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight mb-4 drop-shadow-lg">
-            Pioneering the Future of Ink
+          <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tight drop-shadow-lg">
+            About Lorikeet Inks
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
-            Our Mission: To lead the industry with high-performance, sustainable ink solutions through relentless innovation.
-          </p>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Our Journey</h2>
-              <p className="mt-4 text-muted-foreground">
-                Since our inception in 2005, Lorikeet Inks has been on a mission to redefine the flexographic printing industry. We were born from the challenge to create water-based inks that offered world-class performance without ecological compromise.
-              </p>
-              <p className="mt-4 text-muted-foreground">
-                What started in a single lab has blossomed into a nationwide network, serving as a trusted partner to corrugated converters. Our story is one of scientific curiosity, customer-centric innovation, and a profound commitment to environmental stewardship. We're proving that vibrant, durable packaging and a greener planet are not mutually exclusive—they're the future.
-              </p>
-            </div>
-            <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://picsum.photos/seed/lab/500/500"
-                alt="Early photo of the Lorikeet Inks lab"
-                data-ai-hint="old laboratory"
+                src="https://picsum.photos/seed/factory/600/450"
+                alt="Modern manufacturing facility"
+                data-ai-hint="modern factory"
                 fill
                 className="object-cover"
               />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Who We Are</h2>
+              <p className="mt-4 text-muted-foreground">
+                Since 2005, Lorikeet Inks has emerged as a leading manufacturer of high-quality, water-based flexographic inks for the corrugated packaging industry. We are dedicated to delivering innovative and sustainable ink solutions that meet the evolving demands of our customers and the environment.
+              </p>
+              <p className="mt-4 text-muted-foreground">
+                Our journey is driven by a passion for excellence and a commitment to research and development. We combine advanced technology with deep industry expertise to create products that not only provide superior print quality but also enhance operational efficiency for our partners.
+              </p>
             </div>
           </div>
         </div>
@@ -59,63 +56,99 @@ export default function AboutPage() {
 
       <section className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="bg-background p-8 rounded-lg">
+              <div className="flex items-center gap-4">
+                <Target className="w-10 h-10 text-primary"/>
+                <h2 className="text-3xl font-headline font-bold text-foreground">Our Mission</h2>
+              </div>
+              <p className="mt-4 text-muted-foreground">
+                To be the leading provider of innovative, sustainable, and high-performance ink solutions for the flexographic printing industry. We strive to empower our customers with exceptional products and unparalleled technical support, fostering long-term partnerships built on trust and mutual success.
+              </p>
+            </div>
+             <div className="bg-background p-8 rounded-lg">
+              <div className="flex items-center gap-4">
+                <TrendingUp className="w-10 h-10 text-accent"/>
+                <h2 className="text-3xl font-headline font-bold text-foreground">Our Vision</h2>
+              </div>
+              <p className="mt-4 text-muted-foreground">
+                To create a future where vibrant printing and environmental responsibility go hand-in-hand. We envision a world where our eco-conscious technologies set new industry standards, driving a global shift towards a greener, more sustainable printing ecosystem for generations to come.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Our Core Pillars</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Why Choose Us?</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              The foundational values that drive our business and innovation.
+              Our dedication to excellence sets us apart.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-primary/20">
-              <CardHeader className="items-center">
-                <div className="bg-accent/20 p-3 rounded-full mb-2">
-                  <TestTube2 className="w-8 h-8 text-accent" />
-                </div>
-                <CardTitle className="font-headline">Innovation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">We relentlessly pursue the next breakthrough, investing in R&D to develop smarter, more efficient ink technologies.</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center border-primary/20">
-              <CardHeader className="items-center">
-                <div className="bg-accent/20 p-3 rounded-full mb-2">
-                   <Recycle className="w-8 h-8 text-accent" />
-                </div>
-                <CardTitle className="font-headline">Sustainability</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">Our commitment is to a healthier planet, creating eco-conscious products that set new standards for the industry.</p>
-              </CardContent>
-            </Card>
-             <Card className="text-center border-primary/20">
-              <CardHeader className="items-center">
-                <div className="bg-accent/20 p-3 rounded-full mb-2">
-                   <Users className="w-8 h-8 text-accent" />
-                </div>
-                <CardTitle className="font-headline">Partnership</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">We build lasting relationships by acting as a true partner, offering tailored solutions and expert support.</p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center flex flex-col items-center">
+              <div className="bg-accent/10 p-3 rounded-full mb-4">
+                <Award className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2">Quality</h3>
+              <p className="text-muted-foreground">We deliver inks with consistent, reliable, and superior performance.</p>
+            </div>
+            <div className="text-center flex flex-col items-center">
+              <div className="bg-accent/10 p-3 rounded-full mb-4">
+                <Sparkles className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2">Innovation</h3>
+              <p className="text-muted-foreground">Our R&D team continuously develops next-generation ink technologies.</p>
+            </div>
+             <div className="text-center flex flex-col items-center">
+              <div className="bg-accent/10 p-3 rounded-full mb-4">
+                <Users className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2">Customer Satisfaction</h3>
+              <p className="text-muted-foreground">Your success is our priority, backed by expert support.</p>
+            </div>
+             <div className="text-center flex flex-col items-center">
+              <div className="bg-accent/10 p-3 rounded-full mb-4">
+                <Handshake className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2">Partnership</h3>
+              <p className="text-muted-foreground">We build lasting relationships through collaboration and trust.</p>
+            </div>
           </div>
         </div>
       </section>
       
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-12">The Minds Behind the Ink</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
-            {teamMembers.map((member) => (
-              <div key={member.name} className="flex flex-col items-center">
-                <Avatar className="w-24 h-24 mb-4 border-4 border-primary/20">
-                  <AvatarImage src={member.imageUrl} alt={member.name} data-ai-hint="professional headshot" />
-                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                </Avatar>
-                <h3 className="font-semibold">{member.name}</h3>
-                <p className="text-primary text-sm font-medium">{member.role}</p>
-              </div>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-12">Meet Our Leadership Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {teamMembers.slice(0, 6).map((member) => (
+              <Card key={member.name} className="flex flex-col items-center text-center">
+                 <CardHeader>
+                  <Avatar className="w-28 h-28 mb-4 border-4 border-primary/20">
+                    <AvatarImage src={member.imageUrl} alt={member.name} data-ai-hint="professional headshot" />
+                    <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                  </Avatar>
+                  <CardTitle className="font-headline text-2xl">{member.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-primary text-md font-medium">{member.role}</p>
+                  <p className="text-muted-foreground mt-2 text-sm">
+                    {
+                      {
+                        "Founder & CEO": "Guiding our vision with decades of industry experience.",
+                        "Head of R&D": "Driving innovation and the next generation of ink technology.",
+                        "Lead Chemist": "Perfecting our formulas for unparalleled quality and performance.",
+                        "Production Manager": "Ensuring operational excellence and timely delivery.",
+                        "Quality Assurance Lead": "Upholding our commitment to the highest quality standards.",
+                        "Sales Director": "Building strong partnerships and driving customer success."
+                      }[member.role] || ""
+                    }
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
