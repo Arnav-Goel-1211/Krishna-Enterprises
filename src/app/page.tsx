@@ -9,21 +9,21 @@ const specializedUses = [
   {
     title: "Paper Cups & Napkins",
     icon: <CupSoda className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/paper-cups/500/350",
+    imageUrl: "/images/paper-cups.jpg",
     dataAiHint: "paper cups",
     description: "Safe and compliant inks for single-use items, offering sharp prints and quick drying for high-speed converting lines."
   },
   {
     title: "Corrugated Boxes",
     icon: <Box className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/shipping-boxes/500/350",
+    imageUrl: "/images/corrugated-boxes.jpg",
     dataAiHint: "shipping boxes",
     description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
   },
   {
     title: "Stationery",
     icon: <Pencil className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/journals/500/350",
+    imageUrl: "/images/stationery.jpg",
     dataAiHint: "printed journals",
     description: "Achieve crisp, clean, and consistent color for notebooks, envelopes, and other paper-based stationery products."
   },
@@ -108,7 +108,6 @@ export default function Home() {
                           <Image
                               src={use.imageUrl}
                               alt={use.title}
-                              data-ai-hint={use.dataAiHint}
                               fill
                               className="object-cover transition-transform duration-300 group-hover:scale-105"
                           />
