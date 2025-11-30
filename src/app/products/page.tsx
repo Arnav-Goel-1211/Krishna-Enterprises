@@ -11,36 +11,36 @@ const specializedUses = [
   {
     title: "Corrugated Boxes",
     icon: <Box className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/boxes/500/350",
-    dataAiHint: "corrugated boxes",
+    imageUrl: "https://picsum.photos/seed/printedboxes/500/350",
+    dataAiHint: "printed boxes",
     description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
   },
   {
     title: "Paper Cups & Napkins",
     icon: <CupSoda className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/cups/500/350",
-    dataAiHint: "paper cups",
+    imageUrl: "https://picsum.photos/seed/papercups/500/350",
+    dataAiHint: "printed cups",
     description: "Safe and compliant inks for single-use items, offering sharp prints and quick drying for high-speed converting lines."
   },
   {
     title: "Stationery",
     icon: <Pencil className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/stationery/500/350",
-    dataAiHint: "stationery items",
+    imageUrl: "https://picsum.photos/seed/notebooks/500/350",
+    dataAiHint: "printed stationery",
     description: "Achieve crisp, clean, and consistent color for notebooks, envelopes, and other paper-based stationery products."
   },
   {
     title: "Food Packaging",
     icon: <Utensils className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/foodpackaging/500/350",
+    imageUrl: "https://picsum.photos/seed/foodbox/500/350",
     dataAiHint: "food packaging",
     description: "Our food-grade compliant inks are formulated for safety and performance in indirect food contact applications like flexible packaging and labels."
   },
   {
     title: "Other Applications",
     icon: <FileText className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/otherpaper/500/350",
-    dataAiHint: "printed paper",
+    imageUrl: "https://picsum.photos/seed/paperbags/500/350",
+    dataAiHint: "shopping bag",
     description: "From gift wrap to paper bags and more, our versatile water-based inks are adaptable to a wide array of printing needs."
   }
 ];
