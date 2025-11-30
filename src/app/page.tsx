@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -8,22 +9,22 @@ const specializedUses = [
   {
     title: "Paper Cups & Napkins",
     icon: <CupSoda className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/papercups/500/350",
-    dataAiHint: "printed cups",
+    imageUrl: "https://picsum.photos/seed/paper-cups/500/350",
+    dataAiHint: "paper cups",
     description: "Safe and compliant inks for single-use items, offering sharp prints and quick drying for high-speed converting lines."
   },
   {
     title: "Corrugated Boxes",
     icon: <Box className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/printedboxes/500/350",
-    dataAiHint: "printed boxes",
+    imageUrl: "https://picsum.photos/seed/shipping-boxes/500/350",
+    dataAiHint: "shipping boxes",
     description: "Our inks provide excellent adhesion and vibrant colors on all types of corrugated and kraft linerboards, perfect for shipping and retail packaging."
   },
   {
     title: "Stationery",
     icon: <Pencil className="w-10 h-10 text-primary" />,
-    imageUrl: "https://picsum.photos/seed/notebooks/500/350",
-    dataAiHint: "printed stationery",
+    imageUrl: "https://picsum.photos/seed/journals/500/350",
+    dataAiHint: "printed journals",
     description: "Achieve crisp, clean, and consistent color for notebooks, envelopes, and other paper-based stationery products."
   },
 ];
