@@ -7,6 +7,9 @@ import { Toaster } from "@/components/ui/toaster"
 export const metadata: Metadata = {
   title: 'Lorikeet Inks',
   description: 'High-Quality Water-Based Flexo Inks for Corrugated Boxes',
+  icons: {
+    icon: '/logo.png',
+  },
 };
 
 export default function RootLayout({
